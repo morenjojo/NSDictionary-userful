@@ -18,6 +18,6 @@ safety get set value methods for a NSDictionary
 
 - -(NSArray *)sortedKeysWithOption:(DWDictionaryKeySortedType)type;
 - -(NSArray *)allValuesWithKeySortedOpetion:(DWDictionaryKeySortedType)type;
+- (NSArray *)keyValueArrayWithSortOption:(DWDictionaryKeySortedType)sortType;
 
-// 过滤NSNull
 - -(NSDictionary *)dictionaryWithoutNullValue;
