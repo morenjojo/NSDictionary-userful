@@ -125,6 +125,23 @@
     return nil;
 }
 
+- (NSArray *)keyValueArrayWithSortOption:(DWDictionaryKeySortedType)sortType {
+    if (self.count > 0) {
+        NSMutableArray *mtArr = [NSMutableArray array];
+        NSArray *sortedKeys = [self sortedKeysWithOption:sortType];
+        
+        for (NSString *key in sortedKeys) {
+            id value = [self objectForKey:key];
+            if (key && value) {
+                [mtArr addObject:@[key, value]];
+            }
+        }
+        
+        return mtArr;
+    }
+    return nil;
+}
+
 - (NSDictionary *)dictionaryWithoutNullValue {
     if (self.count > 0) {
         NSMutableDictionary *mutDic = [NSMutableDictionary new];
