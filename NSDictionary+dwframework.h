@@ -31,8 +31,8 @@ typedef NS_ENUM(NSUInteger, DWDictionaryKeySortedType) {
 
 - (NSArray *)sortedKeysWithOption:(DWDictionaryKeySortedType)type;
 - (NSArray *)allValuesWithKeySortedOpetion:(DWDictionaryKeySortedType)type;
+- (NSArray *)keyValueArrayWithSortOption:(DWDictionaryKeySortedType)sortType;
 
-// 过滤NSNull
 - (NSDictionary *)dictionaryWithoutNullValue;
 
 @end
